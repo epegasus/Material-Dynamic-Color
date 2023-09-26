@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Material Dynamic Color</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="home">Home</string>
+    <string name="videos">Videos</string>
+</resources>
