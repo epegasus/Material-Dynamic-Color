@@ -13,18 +13,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        onClick(false)
+        onClick()
         setContentView(binding.root)
-
-
-        binding.mbEnable.setOnClickListener { onClick(true) }
-        binding.mbDisable.setOnClickListener { onClick(false) }
     }
 
-    private fun onClick(isEnable: Boolean) {
+    private fun onClick() {
         val builder = DynamicColorsOptions.Builder().setOnAppliedCallback {
             Log.d("MyTag", "onClick: applied")
         }
+        Log.d("MyTag", "onClick: about to apply")
         DynamicColors.applyToActivityIfAvailable(this, builder.build())
     }
 }
